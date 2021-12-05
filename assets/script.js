@@ -1,9 +1,12 @@
 // Assignment code here
 function generatePassword() {
 
+  var password;
+
   function length() {
     // window.prompt for parseInt value between 8-128
-    var validateLength = 0
+    var validateLength = 0;
+
     // if invalid value is entered
       var validInput = false;
       while(!validInput) {
@@ -18,21 +21,71 @@ function generatePassword() {
           window.alert("You did not pick a valid option. Try again.");
         }
       }
-    }
-  
-  var lowerCase = window.confirm("Include lowercase letters?");
-    // if yes, include lowercase letters in generatePassword
-  
-  var upperCase = window.confirm("Include uppercase letters?");
-    // if yes, include uppercase letters in generatePassword
-  
-  var numeric = window.confirm("Include numbers?");
-    //  if yes, include numbers in generatePassword
-  
-  var specialCharacters = window.confirm("Include special characters?");
-    // if yes, include special characters in generatePassword
-  
 
+      // newVar validateLength = validateLength;
+      // return validateLength;
+    }
+
+  length();  
+  
+  function characters() {
+    var lowerCase = window.confirm("Include lowercase letters?");
+      // if yes, include lowercase letters in generatePassword
+      if (lowerCase) {
+        const lowerCaseList = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+
+      }
+  
+    var upperCase = window.confirm("Include uppercase letters?");
+      // if yes, include uppercase letters in generatePassword
+      if (upperCase) {
+        const upperCaseList = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+      }
+  
+    var numeric = window.confirm("Include numbers?");
+      //  if yes, include numbers in generatePassword
+      if (numeric) {
+        const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+      }
+  
+    var specialCharacters = window.confirm("Include special characters?");
+      // if yes, include special characters in generatePassword
+      if (specialCharacters) {
+        const specialCharacterList = ["!", "#", "$", "%", "&", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "{", "}", "|", "~"]
+      }
+    
+    // if user did not select yes for any
+    if (!lowerCase && !upperCase && !numeric && !specialCharacters) {
+      window.alert("You must choose at least one option from the list.");
+      characters();
+    }
+
+    //if user selected all
+    else if () {
+
+    }
+
+    // if user selected three
+    else if () {
+
+    }
+
+    // if user selected two
+    else if () {
+
+    }
+
+    // if user selected one
+    else if () {
+
+    }
+
+    // need to return values to call at global scale from local prompts
+  }
+  
+  characters();
+
+  // randomize based off user input, called globally
 
 
 
