@@ -1,6 +1,4 @@
 // Assignment code here
-
-
 function length() {
   var validateLength = 0;
 
@@ -55,22 +53,22 @@ function characters() {
     allOptions = [...specialCharacterList, ...allOptions];
   }
   
-  // if user did not select yes for any
-  if (!lowerCase && !upperCase && !numeric && !specialCharacters) {
-    window.alert("You must choose at least one option from the list.");
-    characters();
-  }
-
-  else {
-    return allOptions;
-  }
+  return allOptions;
 }
   
 function generatePassword() {
 
   var newPassword = '';
   var passwordLength = length();
-  var userPickedOptions = characters();
+  
+  var userPickedOptions=[];
+  while (userPickedOptions.length == 0) {
+    userPickedOptions=[...characters()]
+    if (userPickedOptions.length == 0) {
+      window.alert("Please pick an option.");
+      continue
+    }
+  }
 
   for (var i = 0; i < passwordLength; i++){
 
